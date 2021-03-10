@@ -4,3 +4,12 @@ function countDown(count) {
   }
 }
 countDown(6);
+const name = "Hieu";
+const user = {
+  name,
+  greeting() {
+    console.log("hihi");
+  },
+};
+console.log(user.name);
+user.greeting();
