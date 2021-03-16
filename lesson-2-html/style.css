@@ -48,6 +48,9 @@ body {
   display: inline;
   margin-right: 40px;
 }
+.w3school__slogan::after {
+  clear: both;
+}
 .w3school__loginbtn {
   font-size: 1.9rem;
   width: 160px;
