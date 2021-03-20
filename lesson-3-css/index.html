@@ -4,14 +4,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      span {
-        display: inline-block;
-        font-size: 30px;
+      .container {
+        width: 400px;
+        height: 400px;
+        position: fixed;
+        background-color: tomato;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+      }
+      .inner-container {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        background-color: teal;
+        right: 0;
+        bottom: 0;
+      }
+      [class^="col-"] {
+      }
+      .row::after {
+        content: "";
+        display: table;
+        clear: both;
       }
     </style>
   </head>
   <body>
-    <span id="greeting-span">Helloooo....My name is </span>
-    <span id="name-span">Hieu</span>
+    <div class="container">
+      <div class="inner-container"></div>
+    </div>
   </body>
 </html>
