@@ -4,6 +4,7 @@ const users = [
   { id: "1000", name: "Khai" },
   { id: "4", name: "Tien" },
 ];
+const utils = require("../utils/generalUtils");
 
 module.exports.getUsers = (req, res) => {
   res.status(200).json({
@@ -61,7 +62,7 @@ module.exports.addNewUser = (req, res) => {
   let id = Math.floor(Math.random() * 100);
   const { name } = req.body;
 
-  while (isExistId(id)) {
+  while (utils.isExistId(id, users)) {
     id = Math.floor(Math.random() * 100);
   }
 
@@ -77,6 +78,7 @@ module.exports.addNewUser = (req, res) => {
 module.exports.updateUserById = (req, res) => {
   const { id } = req.params;
   const user = users.find((user) => user.id === id);
+  const name = req.body;
 
   if (!user) {
     return res.status(400).json({
@@ -85,7 +87,7 @@ module.exports.updateUserById = (req, res) => {
     });
   }
 
-  user.name = randomName(5);
+  user.name = name;
 
   return res.status(200).json({
     isSuccess: true,
@@ -93,25 +95,3 @@ module.exports.updateUserById = (req, res) => {
     users,
   });
 };
-
-function randomName(length) {
-  let result = "";
-  let characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-  let charactersLength = characters.length;
-
-  for (let i = 0; i < length; i++) {
-    result += characters.charAt(Math.floor(Math.random() * charactersLength));
-  }
-
-  return result;
-}
-
-function isExistId(id) {
-  for (let i = 0; i < users.length; i++) {
-    if (users[i].id === id) {
-      return true;
-    }
-  }
-
-  return false;
-}
