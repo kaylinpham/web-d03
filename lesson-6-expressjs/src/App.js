@@ -10,6 +10,11 @@ const port = 8080;
 
 app.use(bodyParser.json());
 
+app.use("/users", (req, res, next) => {
+  console.log("The request is receiveed at : ", new Date());
+  next();
+});
+//bỏ phần views
 app.use("/users", usersRoute);
 
 app.use("/posts", postsRoute);

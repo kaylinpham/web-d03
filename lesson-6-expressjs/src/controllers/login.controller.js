@@ -4,7 +4,7 @@ module.exports.login = (req, res) => {
   const { username, password } = req.body;
 
   return isExistAccount({ username, password }, accounts)
-    ? res.status(200).json({ isSuccess: true, message: "Success", accounts })
+    ? res.status(200).json({ isSuccess: true, message: "Success." })
     : res.status(400).json({ isSuccess: false, message: "Invalid account." });
 };
 
