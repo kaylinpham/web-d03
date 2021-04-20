@@ -1,0 +1,11 @@
+.example__box {
+  /* height: 10rem; */
+  text-align: center;
+  /* line-height: 10rem; */
+  border: black 1px ridge;
+}
+.bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}

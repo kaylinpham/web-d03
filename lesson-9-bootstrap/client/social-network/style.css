@@ -1,0 +1,328 @@
+:root {
+  font-size: 14px;
+  --navbar__height: 50px;
+}
+.f2rem {
+  font-size: 2rem;
+}
+.main {
+  background-color: #f0f2f5;
+  box-sizing: border-box;
+  padding-top: 2rem;
+  padding-bottom: 20rem;
+}
+.mt3rem {
+  margin-top: 3rem;
+}
+.mb1rem {
+  margin-bottom: 1rem;
+}
+.fgray {
+  color: #606770;
+}
+#fb__logo {
+  margin: auto;
+  display: block;
+  margin-bottom: 1rem;
+}
+.txt__center {
+  text-align: center;
+}
+.block {
+  display: block;
+}
+.user__card {
+  width: 150px;
+  height: 190px;
+  box-sizing: content-box;
+  border-radius: 8px;
+  margin: auto;
+  border: 0.1px solid rgb(212, 212, 212);
+  cursor: pointer;
+  background-color: white;
+  position: relative;
+  transition: 0.3s;
+}
+.user__card:hover {
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+}
+.user__cards {
+  padding: 0 1.8rem;
+}
+.user__card-img {
+  width: 150px;
+  height: 150px;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+.user__card-name {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 17px;
+}
+.user__card-wrapper {
+  margin: auto;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+.user__card-img--wrapper {
+  width: 150px;
+  height: 150px;
+  background-color: #f5f6f7;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  text-align: center;
+}
+.account__add-title {
+  color: #1877f2;
+}
+.user__card-cancel {
+  position: absolute;
+  width: 1.2rem;
+  top: 0.2rem;
+  left: 0.2rem;
+}
+.login__form {
+  width: 364px;
+  margin: auto;
+  padding: 1rem;
+  align-items: center;
+  background-color: #fff;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+  box-sizing: border-box;
+  padding-bottom: 2rem;
+}
+.login__input {
+  display: block;
+  border: 1px solid #dddfe2;
+  color: #1d2129;
+  line-height: 16px;
+  padding: 14px;
+  font-size: 16px;
+  width: 330px;
+  margin: auto;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+.login__input-btn {
+  background-color: #1877f2;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+}
+.forget__pw {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.forget__pw:hover {
+  text-decoration: underline 1px #1877f2;
+}
+.create__acc-btn {
+  border: none;
+  border-radius: 6px;
+  padding: 0 16px;
+  line-height: 48px;
+  background-color: #42b72a;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  margin: auto;
+  margin-top: 1.5rem;
+}
+.fw600 {
+  font-weight: 600;
+}
+.login__description {
+  font-size: 23px;
+}
+@media screen and (max-width: 576px) {
+  .user__cards {
+    padding: 0 5rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .login__description {
+    text-align: center;
+  }
+  .login__guide {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .user__cards {
+    padding: 0 1.5rem 0 0;
+  }
+  .login__description {
+    text-align: start;
+  }
+  .login__guide {
+    text-align: start;
+  }
+  #fb__logo {
+    margin-left: 0;
+  }
+  .user__card-wrapper {
+    margin-left: 0;
+  }
+  .main {
+    padding-top: 7rem;
+  }
+  .login__form-wrapper {
+    padding-top: 3rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .user__cards {
+    padding: 0 4rem 0 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .user__cards {
+    padding: 0 10rem 0 0;
+  }
+}
+
+.homepage {
+  height: 100vh;
+  overflow: hidden;
+}
+.navbar {
+  height: var(--navbar__height);
+  background-color: #f0f2f5;
+  box-sizing: border-box;
+  line-height: 100%;
+  padding: 0;
+}
+.contents {
+  height: calc(100vh - var(--navbar__height));
+}
+.newfeeds__wrapper {
+  box-sizing: border-box;
+  padding: 0;
+}
+.contacts__wrapper,
+.utils__wrapper {
+  display: none;
+}
+.posts {
+  width: 100%;
+  box-sizing: border-box;
+  margin: auto;
+  overflow: scroll;
+  height: calc(100vh - var(--navbar__height));
+  overflow-x: hidden;
+}
+.post {
+  background-color: #f0f2f5;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin: 2rem 0;
+}
+.identity__img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.post__img {
+  width: 100%;
+}
+.identity {
+  box-sizing: border-box;
+  padding: 0.5rem 1rem;
+}
+.identity__name {
+  line-height: 100%;
+  box-sizing: border-box;
+  padding: 0.5rem;
+  font-weight: 500;
+}
+.caption {
+  padding: 0 0.5rem 0.5rem 1rem;
+  margin: 0;
+}
+.react__item-img {
+  width: 35px;
+  cursor: pointer;
+}
+.react__item {
+  padding: 0.5rem 0 0.5rem 2rem;
+}
+.react__item span {
+  line-height: 100%;
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding-left: 0.5rem;
+}
+#logo__main {
+  width: 40px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+.shortcuts {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  cursor: pointer;
+}
+.shortcuts:not(:last-child) {
+  /* margin-right: 0.4rem; */
+}
+.shortcuts-square {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  cursor: pointer;
+  color: #606770;
+}
+i {
+  transform: translate(0, 100%);
+}
+.shortcuts:hover,
+.shortcuts-square:hover {
+  background-color: rgb(219, 219, 219);
+}
+.general__shortcuts {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding-left: 1rem;
+}
+.others__shortcuts {
+  text-align: end;
+  box-sizing: border-box;
+  padding-right: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .contacts__wrapper {
+    display: block;
+  }
+}
+@media screen and (min-width: 550px) and (max-width: 992px) {
+  .posts {
+    width: 500px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .posts {
+    width: 600px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .utils__wrapper {
+    display: block;
+  }
+}
