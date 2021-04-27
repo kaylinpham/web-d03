@@ -86,6 +86,5 @@ module.exports.deletePostById = async (req, res) => {
   return res.status(200).json({
     isSuccess: true,
     message: "Success delete.",
-    post,
   });
 };
