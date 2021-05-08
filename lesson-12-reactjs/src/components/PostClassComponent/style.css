@@ -1,0 +1,18 @@
+.post__container {
+  border-radius: 10px;
+  border: 1px gray solid;
+  margin: 1rem auto;
+  width: 50vw;
+  box-shadow: 3px 5px 4px gray;
+  text-align: left;
+  box-sizing: border-box;
+  padding: 0 1rem;
+  cursor: pointer;
+}
+.post__container:hover,
+.post-clicked {
+  background-color: rgb(199, 199, 199);
+}
+.post__author {
+  font-weight: 700;
+}

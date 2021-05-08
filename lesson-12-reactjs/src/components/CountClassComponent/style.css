@@ -1,0 +1,10 @@
+.count__container {
+  margin: 2rem;
+}
+.inc__btn {
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  outline: none;
+}
