@@ -9,6 +9,7 @@ class UserClassComponent extends React.Component {
     return nextProps.postInfo !== this.props.postInfo;
   };
   render() {
+    console.log("User Class Component");
     const { name, age, gender } = this.props;
     return (
       <div className="user-class__component">

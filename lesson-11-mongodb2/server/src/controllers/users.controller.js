@@ -45,9 +45,9 @@ module.exports.deleteUserById = async (req, res) => {
 };
 
 module.exports.createNewUser = (req, res) => {
-  const { email, password, firstName, lastName, birthday, isMale } = req.body;
+  const { email, password } = req.body;
 
-  if (!email || !password || !firstName || !lastName || !birthday) {
+  if (!email || !password) {
     return res.status(400).json({
       isSuccess: false,
       message: "Missing required fields",

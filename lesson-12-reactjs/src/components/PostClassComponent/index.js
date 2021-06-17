@@ -3,26 +3,20 @@ import "./style.css";
 class PostClassComponent extends Component {
   constructor(props) {
     super(props);
-    this.state = { isClick: false };
-    this.handleClick = this.handleClick.bind(this);
   }
   shouldComponentUpdate = (nextProps, nextState) => {
-    return (
-      nextProps.postInfo !== this.props.postInfo || nextState !== this.state
-    );
+    return nextProps.postInfo !== this.props.postInfo;
   };
-  handleClick = () => {
-    this.setState((state) => ({ isClick: !state.isClick }));
-    this.props.handleClick(this.props.postInfo.id);
-  };
+
   render() {
-    const { author, contents, isClicked } = this.props.postInfo;
+    const { id, author, contents, isClicked } = this.props.postInfo;
+    console.log(contents);
     return (
       <div
         className={
           isClicked ? "post__container post-clicked" : "post__container"
         }
-        onClick={this.handleClick}
+        onClick={() => this.props.handleClick(id)}
       >
         <p className="post__author">{author}</p>
         <p className="post__contents">{contents}</p>

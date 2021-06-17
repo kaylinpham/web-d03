@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-class ClockClassComponent extends Component {
+class CountdownClassComponent extends Component {
   constructor(props) {
     super(props);
     this.state = { time: new Date(), seconds: 0 };
@@ -25,6 +25,7 @@ class ClockClassComponent extends Component {
     return clearInterval(this.setTime);
   };
   render() {
+    // console.log("Countdown");
     const seconds = this.state.seconds;
     const hour = Math.floor(seconds / 3600);
     let minute = Math.floor((seconds - hour * 3600) / 60);
@@ -43,4 +44,4 @@ class ClockClassComponent extends Component {
   }
 }
 
-export default ClockClassComponent;
+export default CountdownClassComponent;

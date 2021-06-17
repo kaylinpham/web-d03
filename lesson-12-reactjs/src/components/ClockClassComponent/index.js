@@ -17,6 +17,7 @@ class ClockClassComponent extends Component {
   };
 
   render() {
+    // console.log("Clock");
     return (
       <div className="clock__container">
         <b>Bây giờ là:</b>

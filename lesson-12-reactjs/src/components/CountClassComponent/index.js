@@ -17,6 +17,7 @@ class CountClassComponent extends Component {
   };
 
   render() {
+    console.log("Count Class Component");
     return (
       <div className="count__container">
         <h2>{this.state.count}</h2>

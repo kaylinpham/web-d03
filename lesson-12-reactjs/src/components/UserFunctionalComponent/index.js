@@ -4,6 +4,7 @@ const UserFunctionalComponent = React.memo(function UserFunctionalComponent(
   props
 ) {
   const { name, age, gender } = props;
+  console.log("User Functional Component");
   return (
     <div className="functional-component">
       <p className="name">Name: {name}</p>

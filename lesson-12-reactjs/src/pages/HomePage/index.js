@@ -8,15 +8,17 @@ import CountClassComponent from "../../components/CountClassComponent";
 import ClockClassComponent from "../../components/ClockClassComponent";
 import PostClassComponent from "../../components/PostClassComponent";
 import CountdownClassComponent from "../../components/CountdownClassComponent";
-const posts = [
+import CountFunctionalComponent from "../../components/CountFunctionalComponent";
+import ClockFunctionalComponent from "../../components/ClockFunctionalComponent";
+export const posts = [
   {
     id: uuidv4(),
     author: "Công Hiếu",
     contents: "Anh comeback với một Công Hiếu thật phong cách",
     comments: [
-      { author: "Nguyễn A", contents: "Hihi" },
-      { author: "Trần B", contents: "Haha" },
-      { author: "Thị C", contents: "Hoho" },
+      { id: uuidv4(), author: "Nguyễn A", contents: "Hihi" },
+      { id: uuidv4(), author: "Trần B", contents: "Haha" },
+      { id: uuidv4(), author: "Thị C", contents: "Hoho" },
     ],
     isClicked: false,
   },
@@ -25,9 +27,9 @@ const posts = [
     author: "Ngọc Hiệp",
     contents: "Yêu là phải nói cũng như đói là phải ăn",
     comments: [
-      { author: "Quang Pink", contents: "Ben 10" },
-      { author: "Minh Spring", contents: "Bla bla..." },
-      { author: "Quý S", contents: "Chuẩn cơm mẹ nấu anh ơi,,," },
+      { id: uuidv4(), author: "Quang Pink", contents: "Ben 10" },
+      { id: uuidv4(), author: "Minh Spring", contents: "Bla bla..." },
+      { id: uuidv4(), author: "Quý S", contents: "Chuẩn cơm mẹ nấu anh ơi,,," },
     ],
     isClicked: false,
   },
@@ -48,11 +50,11 @@ class HomePage extends React.Component {
     this.handlePostClicked = this.handlePostClicked.bind(this);
   }
   handlePostClicked = (id) => {
-    const newPost = [...this.state.posts];
-    newPost.forEach((post) => {
+    const newPost = this.state.posts.map((post) => {
       if (post.id === id) {
-        post.isClicked = !post.isClicked;
+        return { ...post, isClicked: !post.isClicked };
       }
+      return post;
     });
     this.setState((state) => ({ posts: newPost }));
   };
@@ -62,7 +64,9 @@ class HomePage extends React.Component {
         <UserClassComponent name="Hieu" age="18" gender="male" />
         <UserFunctionalComponent name="Hieu" age="18" gender="male" />
         <CountClassComponent />
+        <CountFunctionalComponent />
         <ClockClassComponent />
+        <ClockFunctionalComponent />
         <CountdownClassComponent />
         {this.state.posts.map((post) => {
           return (
